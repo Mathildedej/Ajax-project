@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 #lazy user creation
 gem 'devise'
 gem 'faker'
+gem 'table_print'
 #Front end gem
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.3.1'

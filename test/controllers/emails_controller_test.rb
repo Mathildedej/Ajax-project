@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class EmailControllerTest < ActionDispatch::IntegrationTest
+class EmailsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get email_index_url
+    get emails_index_url
     assert_response :success
   end
 
