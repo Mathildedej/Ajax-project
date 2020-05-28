@@ -1,24 +1,23 @@
-# README
+# Emails with AJAX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projet de création d'une page emails avec AJAX.
+Ruby, ruby on rails, html, js, ajax.
 
-Things you may want to cover:
+## Liste des fonctionnalitées :
 
-* Ruby version
+```
+OK :
+1. Ajout d'un email
+2. Afficher email
+3. Supprimer email
+5. Appel en JS
 
-* System dependencies
+Petit beugue :
+4. Email lu/nonlu, Appuyer 2 fois le premiere fois sur le bouton pour que la couleur grise change bien, indiquant l'email non lu! Sinon c'est fonctionnel. 
+```
 
-* Configuration
+## Lien Heroku 
 
-* Database creation
+https://matdej-ajax-app.herokuapp.com/
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by Mathilde &#x2764;
