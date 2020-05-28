@@ -13,7 +13,8 @@ OK :
 5. Appel en JS
 
 Petit beugue :
-4. Email lu/nonlu, Appuyer 2 fois le premiere fois sur le bouton pour que la couleur grise change bien, indiquant l'email non lu! Sinon c'est fonctionnel. 
+4. Email lu/nonlu, Appuyer 2 fois le premiere fois sur le bouton pour que la couleur grise change bien, 
+indiquant l'email non lu! Sinon c'est fonctionnel. 
 ```
 
 ## Lien Heroku 
