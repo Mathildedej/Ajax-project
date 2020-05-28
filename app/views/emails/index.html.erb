@@ -16,7 +16,7 @@
       <tbody id="body-email">
       <% @emails.each do |email| %>
         <tr>
-          <td><%= email.object %></td>
+          <td><a href="<%=email_path(email.id)%>" data-remote='true'><%= email.object %></a></td>
         </tr>
       <% end %>
       </tbody>
@@ -26,15 +26,17 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Email selectionné</th>
+          <th id="selected-object">Email selectionné</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>John</td>
+          <td id="selected-body"></td>
         </tr>
       </tbody>
     </table>
+    <a href="<%=emails_path%>" class="btn btn-secondary" data-method='POST' data-remote='true'>Marquer comme non-lu</a>
+    <a href="<%=emails_path%>" class="btn btn-danger" data-method='POST' data-remote='true'>Supprimer</a>
   </div>
 </div>
 
