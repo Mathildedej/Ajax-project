@@ -24,5 +24,5 @@ Category.destroy_all
 end
 
 5.times do 
-  Email.create(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
+  Email.create(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), read: false)
 end

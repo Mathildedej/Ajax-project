@@ -1,3 +1,5 @@
-<tr>
-  <td><a href="<%=email_path(email.id)%>" data-remote='true'><%= email.object %></a></td>
-</tr>
+<% if email.read %>
+  <%= link_to email.object, email_path(email.id), id: email.id, class:"list-group-item list-group-item-action", remote: true %>
+<% else %>
+   <%= link_to email.object, email_path(email.id), id: email.id, class:"list-group-item list-group-item-action list-group-item-secondary", remote: true %>
+<% end %>

@@ -1,2 +1,8 @@
 document.getElementById('body-mail').innerHTML = ""
 document.getElementById('body-mail').insertAdjacentHTML("beforeend", "<%= j render 'show', email: @email %>")
+
+if (<%= @email.read %>) {
+  document.getElementById('<%= @email.id %>').classList.remove("list-group-item-secondary")
+} else {
+  document.getElementById('<%= @email.id %>').classList.add("list-group-item-secondary")
+}

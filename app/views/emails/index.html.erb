@@ -1,3 +1,5 @@
+
+
 <div class="row justify-content-around ">
   <h1>&#x2709;&#xFE0F; Mes Email </h1>
   <div class = "text-center">
@@ -8,17 +10,19 @@
 <div class="row">
   <div class="col-sm-4">
     <table class="table">
-      <thead>
-        <tr>
-          <th>Liste des emails</th>
-        </tr>
-      </thead>
+      <h5>Liste des emails</h5>
       <tbody id="body-email">
-      <% @emails.each do |email| %>
-        <tr id="<%= email.body %>">
-          <td><a href="<%=email_path(email.id)%>" data-remote='true'><%= email.object %></a></td>
-        </tr>
-      <% end %>
+      
+        <% @emails.each do |email| %>
+          <div id="<%= email.body %>">
+          <% if email.read == true%>
+            <%= link_to email.object, email_path(email.id), id: email.id, class:"list-group-item list-group-item-action", remote: true %>
+          <% else %>
+            <%= link_to email.object, email_path(email.id), id: email.id, class:"list-group-item list-group-item-action list-group-item-secondary", remote: true %>
+          <% end %>
+          </div>
+        <% end %>
+      
       </tbody>
     </table>
   </div>

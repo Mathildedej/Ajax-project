@@ -5,6 +5,9 @@ class EmailsController < ApplicationController
 
   def show
     @email = Email.find(params[:id])
+    @email.read = true;
+    puts" $"*20;
+    puts @email.read;
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { }
@@ -12,7 +15,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
+    @email = Email.new(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), read: false)
     if @email.save
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -31,4 +34,14 @@ class EmailsController < ApplicationController
       format.js { }
     end
   end
+
+  def update
+    @email = Email.find(params[:id])
+    @email.toggle(:read).save
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js {}
+    end
+  end
+
 end
