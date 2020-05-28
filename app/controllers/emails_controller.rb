@@ -12,7 +12,20 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.create(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
+    @email = Email.new(object: Faker::Marketing.buzzwords ,body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
+    if @email.save
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js { }
+      end
+    else
+      redirect_to root_path, flash: { error: 'Email not saved'}
+    end
+  end
+
+  def destroy
+    @email = Email.find(params[:id])
+    @email.destroy
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { }

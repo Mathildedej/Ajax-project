@@ -1,2 +1,2 @@
-document.getElementById("selected-object").innerHTML = "<%= @email.object %>"
-document.getElementById("selected-body").innerHTML = "<%= @email.body %>"
+document.getElementById('body-mail').innerHTML = ""
+document.getElementById('body-mail').insertAdjacentHTML("beforeend", "<%= j render 'show', email: @email %>")
