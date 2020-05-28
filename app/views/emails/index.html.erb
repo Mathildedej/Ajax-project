@@ -1,7 +1,7 @@
 <div class="row justify-content-around ">
   <h1>&#x2709;&#xFE0F; Mes Email </h1>
   <div class = "text-center">
-    <a href="<%=emails_path%>" class="btn btn-secondary" data-method='CREATE' data-remote='true'>Nouveau Mail</a>
+    <a href="<%=emails_path%>" class="btn btn-secondary" data-method='POST' data-remote='true'>Nouveau Mail</a>
   </div>
 </div>
 <br> </br>
@@ -13,16 +13,12 @@
           <th>Liste des emails</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="body-email">
+      <% @emails.each do |email| %>
         <tr>
-          <td>John</td>
+          <td><%= email.object %></td>
         </tr>
-        <tr>
-          <td>Mary</td>
-        </tr>
-        <tr>
-          <td>July</td>
-        </tr>
+      <% end %>
       </tbody>
     </table>
   </div>
@@ -41,3 +37,4 @@
     </table>
   </div>
 </div>
+
