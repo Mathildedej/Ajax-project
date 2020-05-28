@@ -16,6 +16,7 @@ Petit beugue :
 4. Email lu/nonlu, Appuyer 2 fois le premiere fois sur le bouton pour que la couleur grise change bien, 
 indiquant l'email non lu! Sinon c'est fonctionnel. 
 ```
+&#x26A0;&#xFE0F; Attendre un peu des fois les actions sont longues, mais ca marche! :)
 
 ## Lien Heroku 
 
